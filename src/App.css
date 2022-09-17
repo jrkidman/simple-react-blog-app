@@ -104,6 +104,7 @@ textarea {
   display: flex;
   flex-direction: column;
   text-align: center;
+  overflow-wrap: break-word;
   justify-content: center;
   background-color: rgb(59, 63, 63, .6);
   border-radius: 20px;
