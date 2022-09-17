@@ -15,8 +15,19 @@ const Blog = ({ userName, userImage, blogEntry, setBlogEntry }) => {
 
     return (
         <div id="main-blog-container">
-            <img id="user-image" src={userImage}></img>
-            <h3>Welcome {userName}!</h3>
+            <div id="blog-header">
+                <div id="logo">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1365/1365481.png"
+                        height="75px"
+                        width="75px"
+                        alt="logo" />
+                </div>
+                <img id="user-image" src={userImage}></img>
+
+            </div>
+            <div><hr /></div>
+
+            <h3 id="welcome-user">Welcome {userName}!</h3>
 
             <div id="blog-to-post">
                 <textarea
@@ -26,6 +37,7 @@ const Blog = ({ userName, userImage, blogEntry, setBlogEntry }) => {
                     onChange={(event) => {
                         const newBlogEntry = event.target.value;
                         setBlogEntry(newBlogEntry);
+
                         // console.log("blog entry: ", newBlogEntry)
 
                     }}></textarea>
@@ -43,8 +55,10 @@ const Blog = ({ userName, userImage, blogEntry, setBlogEntry }) => {
                     {blogArray.map((blog, index) => {
                         return (
                             <div id="single-blog-entry" key={`blog-${index}`}>
-                                <img id="user-image-in-post" src={userImage}></img>
-                                <div>{userName}</div>
+                                <header id="entry-header">
+                                    <img id="user-image-in-post" src={userImage}></img>
+                                    <div id="user-in-entry" >{userName}</div>
+                                </header>
                                 <div>{blog.text}</div>
                                 <button
                                     id="delete-button"
@@ -54,10 +68,8 @@ const Blog = ({ userName, userImage, blogEntry, setBlogEntry }) => {
                                     }}
                                 >Delete Post</button>
                             </div>)
-
                     })}
                 </div>
-
             </div>
 
 

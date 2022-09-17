@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: 'Oswald', sans-serif;
+
 }
 
 .App-logo {
@@ -38,19 +40,35 @@
   }
 }
 
+
 #main-blog-container {
-  background-color: darkseagreen;
+  background: rgb(99, 126, 84);
+  background: linear-gradient(0deg, rgba(99, 126, 84, 1) 0%, rgba(242, 232, 210, 1) 100%);
+  border: darkslategrey dotted 2px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  height: 100vh;
+  width: 600px;
+  height: fit-content;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
 }
+
+#blog-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin: 20px;
+}
+
 
 #blog-entry {
   height: 200px;
   width: 200px;
-  background-color: cadetblue;
+  background-color: rgb(98, 100, 100) opacity .2;
   border-radius: 15px;
   padding: 10px;
   display: flex;
@@ -68,13 +86,95 @@
 
 }
 
-#all-the-blogs {
-  background-color: cadetblue;
-  width: 100px;
+textarea {
+  width: 240px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+#post-blog-button {
+  margin: 10px;
+}
+
+#single-blog-entry {
+  width: 300px;
+  height: fit-content;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(59, 63, 63, .6);
+  border-radius: 20px;
+  border: darkslategrey dotted 2px;
+  margin-bottom: 100px;
+
+}
+
+#entry-header {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  /* margin: 20px; */
+  padding: 20px;
+}
+
+#user-image {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  /* margin-top: 40px; */
 }
 
 #user-image-in-post {
   height: 65px;
   width: 65px;
   border-radius: 50%;
+}
+
+#user-in-entry {
+  font-size: x-large;
+  margin-left: 10px;
+}
+
+.sign-in-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: darkslategray dotted 2px;
+  background: rgb(99, 126, 84);
+  background: linear-gradient(0deg, rgba(99, 126, 84, 1) 0%, rgba(242, 232, 210, 1) 100%);
+  width: 400px;
+  height: 600px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: x-large;
+  border-radius: 15px;
+
+}
+
+#root {
+  margin-top: 100px;
+  font-family: 'Oswald', sans-serif;
+}
+
+button {
+  border-radius: 20px;
+}
+
+/* #delete-button {
+  width: 100px;
+} */
+
+input {
+  border-radius: 20px;
+  width: 200px;
+  height: 30px;
+}
+
+#welcome-user {
+  font-size: xx-large;
 }

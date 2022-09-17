@@ -4,7 +4,14 @@ import { useState } from 'react';
 const SignIn = ({ userName, setUserName, userImage, setUserImage, isSignedIn, setIsSignedIn }) => {
     return (
         <div>
-            <h3>Sign In</h3>
+            <div id="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/1365/1365481.png"
+                    height="75px"
+                    width="75px"
+                    alt="logo" />
+            </div>
+
+            <h3>Welcome, Please Sign In!</h3>
 
             <p>Username:</p>
 
@@ -33,7 +40,7 @@ const SignIn = ({ userName, setUserName, userImage, setUserImage, isSignedIn, se
                     setUserImage(newImageUrl);
                 }}
             ></input>
-
+            <br />
             <button
                 id="sign-in"
                 type="submit"
